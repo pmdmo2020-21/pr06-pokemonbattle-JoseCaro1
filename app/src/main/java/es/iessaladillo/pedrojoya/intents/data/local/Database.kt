@@ -7,12 +7,13 @@ import kotlin.random.Random.Default.nextInt
 
 // TODO: Haz que Database implemente DataSource
 object Database : DataSource {
-    private val pikachu: Pokemon = Pokemon(0,R.string.pikachu,R.drawable.pikachu,100)
-    private val gyarados: Pokemon = Pokemon(1,R.string.gyarados,R.drawable.gyarados,50)
-    private val feebas: Pokemon = Pokemon(2,R.string.feebas,R.drawable.feebas,25)
-    private val bulbasur: Pokemon = Pokemon(3,R.string.bulbasur,R.drawable.bulbasur,200)
-    private val cubone: Pokemon = Pokemon(4,R.string.cubone,R.drawable.cubone,150)
-    private val giratina: Pokemon = Pokemon(5,R.string.giratina,R.drawable.giratina,175)
+
+    private val pikachu: Pokemon = Pokemon(0,R.string.pikachu,R.drawable.pikachu, nextInt(7))
+    private val gyarados: Pokemon = Pokemon(1,R.string.gyarados,R.drawable.gyarados,nextInt(7))
+    private val feebas: Pokemon = Pokemon(2,R.string.feebas,R.drawable.feebas,nextInt(7))
+    private val bulbasur: Pokemon = Pokemon(3,R.string.bulbasur,R.drawable.bulbasur,nextInt(7))
+    private val cubone: Pokemon = Pokemon(4,R.string.cubone,R.drawable.cubone,nextInt(7))
+    private val giratina: Pokemon = Pokemon(5,R.string.giratina,R.drawable.giratina,nextInt(7))
     private var listPokemon: List<Pokemon> =
         listOf(pikachu, gyarados, feebas, bulbasur, cubone, giratina)
 
